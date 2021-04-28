@@ -1,0 +1,23 @@
+body {
+    background-image: url('./pattern.jpg');
+}
+.title, h2,h5 {
+    text-align: center;
+}
+h5 {
+    color: white;
+}
+nav {
+    /* display: inline-block; */
+    float: right;
+}
+nav ul {
+    list-style-type: none;
+}
+nav li {
+    display: inline;
+    padding: 8px;
+}
+footer {
+    background-color: black;
+}
