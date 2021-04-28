@@ -6,38 +6,44 @@
 </head>
 
 <body>
-    <fieldset>
-        <form action="#" autocomplete="on">
-            <div>
-                <h2>Hubungi Kami</h2>
-                <p><b>Kantor</b> : di jalan belum jadi</p>
-                <p><b>Nomor telepon</b> : 08XX-XXXX-XXXX</p>
-                <p><b>Email</b> : email@contoh.com</p>
-            </div>
-            <div>
-                <h2>Kirimkan Pesan</h2>
-                <p>
-                    <b>Nama</b>
-                    <input type="text" name='nama'>
-                </p>
-                <p>
-                    <b>E-mail</b>
-                    <input type="email" name="email">
-                </p>
-                <p>
-                    <b>Jenis Kelamin</b><br>
-                    <input type="radio" name='jk' value="laki-laki" checked> Laki - laki <br>
-                    <input type="radio" name='jk' value="perempuan"> Perempuan
-                </p>
-                <p>
-                    <b>Pesan Anda</b>
-                    <textarea name="message" cols="30" rows="10"></textarea>
-                </p>
-                <input type="submit" value="kirim">
-            </div>
-        </form>
-    </fieldset>
-    <a href="index.html" class="back">Kembali Ke Index</a>
+    <section>
+        <div class="form">
+            <fieldset>
+                <form action="#">
+                    <div class="contact">
+                        <h2>Hubungi Kami</h2>
+                        <p><b>Kantor</b> : di jalan belum jadi</p>
+                        <p><b>Nomor telepon</b> : 08XX-XXXX-XXXX</p>
+                        <p><b>Email</b> : email@contoh.com</p>
+                    </div>
+                    <div class="send">
+                        <h2>Kirimkan Pesan</h2>
+                        <p>
+                            <b>Nama</b>
+                            <input type="text" name='nama'>
+                        </p>
+                        <p>
+                            <b>E-mail</b>
+                            <input type="email" name="email">
+                        </p>
+                        <p>
+                            <b>Jenis Kelamin</b><br>
+                            <input type="radio" name='jk' value="laki-laki" checked> Laki - laki <br>
+                            <input type="radio" name='jk' value="perempuan"> Perempuan
+                        </p>
+                        <p>
+                            <b>Pesan Anda</b>
+                            <textarea name="message" cols="30" rows="10"></textarea>
+                        </p>
+                        <input type="submit" value="kirim" class="kirim">
+                    </div>
+                </form>
+            </fieldset>
+    </section>
+    </div>
+    <div class="back">
+        <a href="index.html">Kembali Ke Index</a>
+    </div>
 </body>
 
 </html>
