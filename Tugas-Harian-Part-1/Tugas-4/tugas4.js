@@ -1,4 +1,4 @@
-// soal1
+// soal 1
 console.log('LOOPING PERTAMA')
 var i = 2;
 while (i <= 20 && i % 2 == 0) {
