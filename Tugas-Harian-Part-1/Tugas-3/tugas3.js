@@ -13,8 +13,8 @@ var lebarPersegiPanjang = "5";
 var alasSegitiga = "6";
 var tinggiSegitiga = "7";
 
-var kelilingPersegiPanjang = 2 * (Number(panjangPersegiPanjang) + Number(lebarPersegiPanjang));
-var luasSegitiga = (Number(alasSegitiga) * Number(tinggiSegitiga)) / 2;
+var kelilingPersegiPanjang = 2 * (parseInt(panjangPersegiPanjang) + parseInt(lebarPersegiPanjang));
+var luasSegitiga = (parseInt(alasSegitiga) * parseInt(tinggiSegitiga)) / 2;
 
 console.log(kelilingPersegiPanjang);
 console.log(luasSegitiga);
