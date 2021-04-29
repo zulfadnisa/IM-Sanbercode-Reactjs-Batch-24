@@ -71,4 +71,4 @@ switch (bulan) {
     case 12: { bulan = 'Desember'; break; }
     default: { 'salah input'; }
 }
-console.log(tanggal + ' ' + bulan + ' ' + tahun)
+console.log( tanggal + ' ' + bulan + ' ' + tahun)
