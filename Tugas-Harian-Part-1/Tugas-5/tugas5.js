@@ -38,12 +38,12 @@ console.log(perkenalan)
 // soal3
 console.log('-----soal 3-----')
 var arrayDaftarPeserta = ["John Doe", "laki-laki", "baca buku", 1992]
-var ObjDaftarPeserta = {
-    nama: "John Doe",
-    jenisKelamin: "laki-laki",
-    hobi: "baca buku",
-    tahunLahir: 1992,
-}
+
+var ObjDaftarPeserta = {}
+ObjDaftarPeserta.nama = arrayDaftarPeserta[0]
+ObjDaftarPeserta.jenisKelamin = arrayDaftarPeserta[1]
+ObjDaftarPeserta.hobi = arrayDaftarPeserta[2]
+ObjDaftarPeserta.tahunLahir = arrayDaftarPeserta[3]
 console.log(ObjDaftarPeserta)
 
 // soal4 
