@@ -6,8 +6,10 @@
   height: 40vmin;
   pointer-events: none;
 }
-.formulir{
+.component{
   margin: 50px 200px;
+}
+form{
   border: solid 2px;
   border-radius: 20px;
   padding: 10px 50px 30px;
@@ -29,6 +31,21 @@ b{
   padding: 3px 8px;
   background-color: white;
   margin-top: 10px;
+}
+table{
+  border: 1px solid black;
+}
+table th{
+  background-color:#aaaaaa;
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 5px;
+
+}
+table td{
+  background-color: #de7d59;
+  padding: 5px 258px 5px 0;
+  text-align: justify;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

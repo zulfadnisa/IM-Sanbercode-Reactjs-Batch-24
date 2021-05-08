@@ -1,9 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
+import FormPembelian from './Tugas-9/FormPembelian.js';
+import TabelHarga from './Tugas-10/TabelHarga.js'
 
 function App() {
   return (
     <div className="App">
+      <TabelHarga/>
+      <FormPembelian />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,31 +22,6 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <div class="formulir">
-        <form action="#">
-          <h1>
-            Form Pembelian Buah
-        </h1>
-          <div class="isi">
-            <p>
-              <b>Nama Pelanggan</b>
-              <input type="text" name="nama" />
-            </p>
-            <p>
-              <b>Daftar Item</b>
-              <div class="daftar">
-                <p><input type="checkbox" />Semangka</p>
-                <p><input type="checkbox" value="jeruk" />Jeruk</p>
-                <p><input type="checkbox" value="nanas" />Nanas</p>
-                <p><input type="checkbox" value="salak" />Salak</p>
-                <p><input type="checkbox" value="anggur" />Anggur</p>
-              </div>
-            </p>
-            <input type="submit" value="kirim" class="kirim" />
-          </div>
-        </form>
-      </div>
-
     </div>
   );
 }
