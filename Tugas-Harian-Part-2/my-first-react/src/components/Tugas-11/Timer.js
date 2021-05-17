@@ -1,5 +1,4 @@
 import React from "react";
-// import "./ClockTimer.css";
 
 class Timer extends React.Component {
   componentWillUnmount() {

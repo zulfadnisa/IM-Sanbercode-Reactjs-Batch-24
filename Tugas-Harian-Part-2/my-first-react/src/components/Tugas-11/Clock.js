@@ -1,9 +1,9 @@
 import React from "react";
 
 class Clock extends React.Component {
-  componentWillUnmount() {
-    clearInterval(this.props.clockId);
-  }
+  // componentWillUnmount() {
+  //   clearInterval(this.props.clockId);
+  // }
   render() {
     return (
       <div>
