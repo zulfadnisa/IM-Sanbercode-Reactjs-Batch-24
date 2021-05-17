@@ -1,27 +1,22 @@
 // import logo from './logo.svg';
-import './App.css';
-import FormPembelian from './Tugas-9/FormPembelian.js';
-import TabelHarga from './Tugas-10/TabelHarga.js'
+import "./App.css";
+import FormPembelian from "./components/Tugas-9/FormPembelian";
+import TabelHarga from "./components/Tugas-10/TabelHarga";
+import ClockTimer from "./components/Tugas-11/ClockTimer";
 
 function App() {
+  const dataHargaBuah = [
+    { nama: "Semangka", harga: 10000, berat: 1000 },
+    { nama: "Anggur", harga: 40000, berat: 500 },
+    { nama: "Strawberry", harga: 30000, berat: 400 },
+    { nama: "Jeruk", harga: 30000, berat: 1000 },
+    { nama: "Mangga", harga: 30000, berat: 500 },
+  ];
   return (
     <div className="App">
-      <TabelHarga/>
+      <TabelHarga items={dataHargaBuah} />
       <FormPembelian />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <ClockTimer start={100} />
     </div>
   );
 }

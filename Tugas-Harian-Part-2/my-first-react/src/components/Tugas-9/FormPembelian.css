@@ -1,0 +1,17 @@
+form {
+  border: solid 2px;
+  border-radius: 20px;
+  padding: 10px 50px 30px;
+}
+.isi {
+  text-align: justify;
+}
+.daftar {
+  margin-left: 155px;
+}
+.kirim {
+  border-radius: 10px;
+  padding: 3px 8px;
+  background-color: white;
+  margin-top: 10px;
+}
