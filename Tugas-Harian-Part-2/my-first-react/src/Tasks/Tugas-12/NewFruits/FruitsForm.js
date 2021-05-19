@@ -5,6 +5,7 @@ function TableForm(props) {
   const [newNama, setNewNama] = React.useState("");
   const [newHarga, setNewHarga] = React.useState("");
   const [newBerat, setNewBerat] = React.useState("");
+
   const namaChangeHandler = (event) => {
     setNewNama(event.target.value);
   };
@@ -22,8 +23,16 @@ function TableForm(props) {
       hargaTotal: +newHarga,
       beratTotal: +newBerat,
     };
-    console.log(newFruitsData);
-    props.saveNewFruits(newFruitsData);
+    let index=-1
+    if (props.index>=0) {
+      index = props.index
+      for (const item in newFruitsData){
+        if (newFruitsData[item] ===''){
+          newFruitsData[item] = props.data[item]
+        }
+      }
+    }
+    props.saveNewFruits(newFruitsData, index);
     setNewNama("");
     setNewBerat("");
     setNewHarga("");
@@ -33,7 +42,12 @@ function TableForm(props) {
       <form onSubmit={submitHandler}>
         <div>
           <label>Nama : </label>
-          <input type="text" value={newNama} onChange={namaChangeHandler} />
+          <input
+            type="text"
+            value={newNama}
+            onChange={namaChangeHandler}
+            placeholder={props.data.nama}
+          />
         </div>
         <div>
           <label>Harga total : </label>
@@ -42,6 +56,7 @@ function TableForm(props) {
             min="100"
             value={newHarga}
             onChange={hargaChangeHandler}
+            placeholder={props.data.hargaTotal}
           />
         </div>
         <div>
@@ -49,9 +64,9 @@ function TableForm(props) {
           <input
             type="number"
             min="0"
-            placeholder="0"
             value={newBerat}
             onChange={beratChangeHandler}
+            placeholder={props.data.beratTotal}
           />
         </div>
         <div className="fruits-form__button">
