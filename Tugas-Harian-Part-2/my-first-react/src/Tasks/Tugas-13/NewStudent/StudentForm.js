@@ -61,7 +61,7 @@ function TableForm(props) {
           className={`${styles["student-form"]} ${!isValid && styles.invalid}`}
         >
           <div>
-            <label>Nama : </label>
+            <label>Nama </label>
             <input
               type="text"
               value={newName}
@@ -70,7 +70,7 @@ function TableForm(props) {
             />
           </div>
           <div>
-            <label>Mata Kuliah : </label>
+            <label>Mata Kuliah </label>
             <input
               type="text"
               value={newCourse}
@@ -79,7 +79,7 @@ function TableForm(props) {
             />
           </div>
           <div>
-            <label>Nilai : </label>
+            <label>Nilai </label>
             <input
               type="number"
               min="0"
@@ -89,8 +89,8 @@ function TableForm(props) {
               placeholder={props.data.score}
             />
           </div>
-          <div className="student-form__button">
-            <button type="submit">submit</button>
+          <div>
+            <button type="submit">SUBMIT</button>
           </div>
         </div>
       </form>

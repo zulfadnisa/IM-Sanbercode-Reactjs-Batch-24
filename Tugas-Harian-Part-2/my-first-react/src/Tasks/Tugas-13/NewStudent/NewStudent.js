@@ -16,7 +16,7 @@ const newStudent = (props) => {
     data.score = props.dataEdit.score;
   }
   return (
-    <div className="fruits-form">
+    <div className="students-form">
       <h2>Form Nilai Mahasiswa</h2>
       <StudentForm saveNewStudent={props.addNewStudent} data={data} />
     </div>

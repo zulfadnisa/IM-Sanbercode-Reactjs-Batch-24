@@ -1,3 +1,17 @@
 .students-table {
-  padding: 2px;
+  border-collapse: collapse;
+  width: 100%;
+}
+.students-table th,.students-table td{
+  padding: 10px 5px;
+}
+.students-table th{
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.students-table td{
+  background-color: #f2f2f2;
+  color: black;
+  border: 1px solid #e4e1e1;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import StudentsTable from "./StudentsTable";
 import NewStudent from "../NewStudent/NewStudent";
 import axios from "axios";
-import './Students.css'
+import "./Students.css";
 const Students = (props) => {
   const [students, setStudents] = React.useState([]);
   const [isEditing, setIsEditing] = React.useState(false);
@@ -71,8 +71,7 @@ const Students = (props) => {
             },
           ]);
         });
-    }
-    else {
+    } else {
       axios
         .put(
           `http://backendexample.sanbercloud.com/api/student-scores/${currentId}`,
@@ -87,15 +86,6 @@ const Students = (props) => {
           setStudents([...students]);
         });
     }
-    // setStudents((prevStudents) => {
-    //   const updatedStudents = [...prevStudents];
-    //   if (index >= 0) {
-    //     updatedStudents.splice(index, 1, student);
-    //   } else {
-    //     updatedStudents.shift(student);
-    //   }
-    //   return updatedStudents;
-    // });
   };
   const addDeleteHandler = (idStudent) => {
     axios
@@ -108,11 +98,6 @@ const Students = (props) => {
         });
         setStudents(updatedStudents);
       });
-
-    // setStudents((prevState) => {
-    //   const updateData = prevState.filter((data, index) => index !== indexData);
-    //   return updateData;
-    // });
   };
   const addEditHandler = (index) => {
     setIsEditing(true);
@@ -124,7 +109,7 @@ const Students = (props) => {
     });
   };
   return (
-    <div className='students'>
+    <div className="students">
       <StudentsTable
         items={students}
         addDelete={addDeleteHandler}
