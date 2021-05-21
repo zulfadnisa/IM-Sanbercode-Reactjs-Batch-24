@@ -3,7 +3,7 @@ import { StudentsProvider } from "../Context/StudentsContext";
 import { StudentEditProvider } from "../Context/StudentEditContext";
 import StudentsTable from "./StudentsTable";
 import NewStudent from "../NewStudent/NewStudent";
-import "./Students.css";
+
 const Students = () => {
   const toScoreIndex = (score) => {
     let index;
@@ -23,14 +23,14 @@ const Students = () => {
     return index;
   };
   return (
-    <div className="students">
+    <>
       <StudentsProvider toIndex={toScoreIndex}>
         <StudentEditProvider>
           <StudentsTable />
           <NewStudent toIndex={toScoreIndex} />
         </StudentEditProvider>
       </StudentsProvider>
-    </div>
+    </>
   );
 };
 export default Students;

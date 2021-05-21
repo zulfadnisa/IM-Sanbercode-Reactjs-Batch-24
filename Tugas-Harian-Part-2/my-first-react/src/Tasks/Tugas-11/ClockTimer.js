@@ -1,14 +1,15 @@
 import React from "react";
 import Clock from "./Clock";
 import Timer from "./Timer";
-import "./ClockTimer.css";
+import style from "../UI/ClockTimer.module.css";
+import Card from "../UI/Card";
 
 class ClockTimer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       date: new Date(),
-      timer: 0,
+      timer: 100,
       hidden: false,
     };
   }
@@ -18,12 +19,6 @@ class ClockTimer extends React.Component {
         date: new Date(),
       });
     }, 1000);
-
-    if (this.props.start !== "undefined") {
-      this.setState({
-        timer: this.props.start,
-      });
-    }
     this.timerId = setInterval(() => {
       this.setState({
         timer: this.state.timer - 1,
@@ -40,16 +35,16 @@ class ClockTimer extends React.Component {
   }
   render() {
     return (
-      <div className="component">
-        <div className="show">
-          <Clock date={this.state.date} clockId={this.clockId} />
-        </div>
-        <div className="show">
-          {this.state.hidden ? null : (
+      <Card className={style.show}>
+        {this.state.hidden ? <p>
+          Timer is stopped.
+        </p> : (
+          <div>
+              <Clock date={this.state.date} clockId={this.clockId} />
             <Timer timer={this.state.timer} timerId={this.timerId} />
-          )}
-        </div>
-      </div>
+          </div>
+        )}
+      </Card>
     );
   }
 }

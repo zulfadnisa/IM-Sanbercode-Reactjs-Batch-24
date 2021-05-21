@@ -1,12 +1,12 @@
 import React from "react";
-import "./TabelHarga.css";
+import styles from "../UI/TabelHarga.module.css";
+import Card from "../UI/Card";
 
 class TabelHarga extends React.Component {
   render() {
     return (
-      <>
-        <div className="component">
-          <h1>Tabel Harga Buah</h1>
+      <Card className={styles.table}>
+        <div>
           <table>
             <thead>
               <tr>
@@ -28,7 +28,7 @@ class TabelHarga extends React.Component {
             </tbody>
           </table>
         </div>
-      </>
+      </Card>
     );
   }
 }

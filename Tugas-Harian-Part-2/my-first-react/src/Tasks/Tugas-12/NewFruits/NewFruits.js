@@ -1,19 +1,19 @@
 import React from "react";
 import FruitsForm from "./FruitsForm";
-import "./NewFruits.css";
+import Header from "../../UI/Header";
 
 const NewFruits = (props) => {
-  const saveNewFruitsHandler = (data,index) => {
+  const saveNewFruitsHandler = (data, index) => {
     const newFruitsData = {
       ...data,
       //   id: Math.random().toString()
     };
-    props.addNewFruits(newFruitsData,index);
+    props.addNewFruits(newFruitsData, index);
   };
   let data = {
-    nama: '',
-    hargaTotal: '',
-    beratTotal: '',
+    nama: "",
+    hargaTotal: "",
+    beratTotal: "",
   };
   if (props.statusEdit === true) {
     data.nama = props.dataEdit.nama;
@@ -21,14 +21,14 @@ const NewFruits = (props) => {
     data.beratTotal = props.dataEdit.berat;
   }
   return (
-    <div className="fruits-form">
-      <h2>Form Daftar Harga Buah</h2>
+    <>
+      <Header title="Form Daftar Harga Buah" />
       <FruitsForm
         saveNewFruits={saveNewFruitsHandler}
-        data = {data}
-        index = {props.dataEdit.index}
+        data={data}
+        index={props.dataEdit.index}
       />
-    </div>
+    </>
   );
 };
 export default NewFruits;

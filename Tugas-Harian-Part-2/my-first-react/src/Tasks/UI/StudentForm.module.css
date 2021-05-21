@@ -1,0 +1,11 @@
+.student-form Button{
+  padding: 9px;
+  width: 20%;
+}
+.student-form.invalid label {
+  color: red;
+}
+.student-form.invalid input {
+  background: rgb(235, 186, 181);
+  border-color: red;
+}

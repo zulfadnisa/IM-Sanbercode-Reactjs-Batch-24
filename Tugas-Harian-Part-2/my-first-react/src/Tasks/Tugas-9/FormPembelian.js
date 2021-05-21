@@ -1,46 +1,49 @@
 import React from "react";
-import "./FormPembelian.css";
+import Card from "../UI/Card";
+import Button from "../UI/Button";
+import Form from "../UI/Form";
+import styles from "../UI/FormPembelian.module.css";
+import Header from "../UI/Header";
 
 class FormPembelian extends React.Component {
   render() {
     return (
-      <div className="component">
-        <form action="#">
-          <h1>Form Pembelian Buah</h1>
-          <div className="isi">
-            <p>
-              <b>Nama Pelanggan</b>
+      <>
+        <Header title="Form Pembelian Buah" />
+        <Card className={styles["checkbox"]}>
+          <Form>
+            <div>
+              <label>Nama Pelanggan</label>
               <input type="text" name="nama" />
-            </p>
-            <p>
-              <b>Daftar Item</b>
-              <div className="daftar">
-                <p>
-                  <input type="checkbox" />
-                  Semangka
-                </p>
-                <p>
-                  <input type="checkbox" value="jeruk" />
-                  Jeruk
-                </p>
-                <p>
-                  <input type="checkbox" value="nanas" />
-                  Nanas
-                </p>
-                <p>
-                  <input type="checkbox" value="salak" />
-                  Salak
-                </p>
-                <p>
-                  <input type="checkbox" value="anggur" />
-                  Anggur
-                </p>
-              </div>
-            </p>
-            <input type="submit" value="kirim" className="kirim" />
-          </div>
-        </form>
-      </div>
+            </div>
+            <div>
+              <label>Daftar Item</label>
+              <p>
+                <input type="checkbox" />
+                <label>Semangka</label>
+              </p>
+
+              <p>
+                <input type="checkbox" value="jeruk" />
+                <label>Jeruk</label>
+              </p>
+              <p>
+                <input type="checkbox" value="nanas" />
+                <label>Nanas</label>
+              </p>
+              <p>
+                <input type="checkbox" value="salak" />
+                <label>Salak</label>
+              </p>
+              <p>
+                <input type="checkbox" value="anggur" />
+                <label>Anggur</label>
+              </p>
+            </div>
+            <Button>kirim</Button>
+          </Form>
+        </Card>
+      </>
     );
   }
 }

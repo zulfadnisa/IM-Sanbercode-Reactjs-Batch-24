@@ -1,4 +1,5 @@
 import React from "react";
+import Button from '../../UI/Button'
 
 const FruitTableItem = (props) => {
 
@@ -13,14 +14,15 @@ const FruitTableItem = (props) => {
       <tr>
         <td>{props.index+1}</td>
         <td>{props.nama}</td>
-        <td>{props.berat}</td>
-        <td>{props.harga / 1000} kg</td>
+        <td>{props.harga}</td>
+        <td>{props.berat / 1000} kg</td>
+        <td>{props.harga / (props.berat/1000)}</td>
         <td>
           <span>
-            <button type="submit" onClick={checkDataEdit}>Edit</button>
+            <Button onClick={checkDataEdit}>Edit</Button>
           </span>
           <span>
-            <button type="submit" onClick={checkDataDelete}>Delete</button>
+            <Button onClick={checkDataDelete}>Delete</Button>
           </span>
         </td>
       </tr>

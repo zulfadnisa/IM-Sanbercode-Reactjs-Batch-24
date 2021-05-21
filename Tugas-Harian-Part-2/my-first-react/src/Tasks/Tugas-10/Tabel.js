@@ -1,5 +1,6 @@
 import React from "react";
 import TabelHarga from "./TabelHarga";
+import Header from "../UI/Header";
 
 function Tabel() {
   const dataHargaBuah = [
@@ -11,6 +12,7 @@ function Tabel() {
   ];
   return (
     <>
+      <Header title="Tabel Harga Buah" />
       <TabelHarga items={dataHargaBuah} />;
     </>
   );

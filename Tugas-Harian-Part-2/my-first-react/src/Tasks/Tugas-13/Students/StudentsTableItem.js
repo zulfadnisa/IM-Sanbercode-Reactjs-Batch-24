@@ -1,5 +1,5 @@
 import React from "react";
-import "./StudentsTableItem.css";
+import Button from "../../UI/Button";
 
 const StudentsTableItem = (props) => {
   const checkDataDelete = () => {
@@ -17,14 +17,14 @@ const StudentsTableItem = (props) => {
       <td>{props.indexScore}</td>
       <td>
         <span>
-          <button type="submit" onClick={checkDataEdit}>
+          <Button type="submit" onClick={checkDataEdit}>
             Edit
-          </button>
+          </Button>
         </span>
         <span>
-          <button type="submit" onClick={checkDataDelete}>
+          <Button type="submit" onClick={checkDataDelete}>
             Delete
-          </button>
+          </Button>
         </span>
       </td>
     </tr>

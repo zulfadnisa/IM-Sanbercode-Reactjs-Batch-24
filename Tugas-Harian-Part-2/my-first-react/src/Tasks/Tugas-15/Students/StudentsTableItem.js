@@ -3,10 +3,16 @@ import axios from "axios";
 import { StudentsContext } from "../Context/StudentsContext";
 import { StudentEditContext } from "../Context/StudentEditContext";
 import Button from "../../UI/Button";
+import { useHistory } from "react-router-dom";
 
 const StudentsTableItem = (props) => {
   const [students, setStudents] = React.useContext(StudentsContext);
   const [editData, setEditData] = React.useContext(StudentEditContext);
+  const history = useHistory();
+
+  const handleClick = (id) => {
+    history.push(`/form/${id}`);
+  };
 
   const addEditHandler = () => {
     setEditData({
@@ -16,6 +22,7 @@ const StudentsTableItem = (props) => {
       score: props.data.score,
       isEditing: true,
     });
+    handleClick(props.data.id);
   };
 
   const addDeleteHandler = () => {

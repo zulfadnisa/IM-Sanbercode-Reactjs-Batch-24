@@ -2,7 +2,7 @@ import React from "react";
 import StudentsTable from "./StudentsTable";
 import NewStudent from "../NewStudent/NewStudent";
 import axios from "axios";
-import "./Students.css";
+
 const Students = (props) => {
   const [students, setStudents] = React.useState([]);
   const [isEditing, setIsEditing] = React.useState(false);
@@ -109,7 +109,7 @@ const Students = (props) => {
     });
   };
   return (
-    <div className="students">
+    <>
       <StudentsTable
         items={students}
         addDelete={addDeleteHandler}
@@ -120,7 +120,7 @@ const Students = (props) => {
         statusEdit={isEditing}
         dataEdit={editData}
       />
-    </div>
+    </>
   );
 };
 export default Students;

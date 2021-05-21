@@ -5,8 +5,10 @@ import { StudentEditContext } from "../Context/StudentEditContext";
 import styles from "../../UI/StudentForm.module.css";
 import ErrorModal from "../../Error/ErrorModal";
 import Card from "../../UI/Card";
-import Button from "../../UI/Button";
+import Header from "../../UI/Header";
 import Form from "../../UI/Form";
+import Button from "../../UI/Button";
+import { useHistory } from "react-router-dom";
 
 function TableForm(props) {
   const nameInput = React.useRef();
@@ -57,6 +59,7 @@ function TableForm(props) {
           });
         });
     }
+    handleClick();
   };
   const submitHandler = (event) => {
     event.preventDefault();
@@ -98,6 +101,18 @@ function TableForm(props) {
   const errorHandler = () => {
     setError(null);
   };
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push("/");
+    setEditData({
+      id: "",
+      name: "",
+      course: "",
+      score: "",
+      isEditing: false,
+    });
+  };
   return (
     <>
       {error && (
@@ -107,6 +122,7 @@ function TableForm(props) {
           onConfirm={errorHandler}
         />
       )}
+      <Header title="Form Nilai Mahasiswa" />
       <Card className={styles["student-form"]}>
         <Form onSubmit={submitHandler}>
           <div>
@@ -133,6 +149,11 @@ function TableForm(props) {
           </div>
           <div>
             <Button type="submit">SUBMIT</Button>
+          </div>
+          <div>
+            <Button type="submit" onClick={handleClick}>
+              Back
+            </Button>
           </div>
         </Form>
       </Card>

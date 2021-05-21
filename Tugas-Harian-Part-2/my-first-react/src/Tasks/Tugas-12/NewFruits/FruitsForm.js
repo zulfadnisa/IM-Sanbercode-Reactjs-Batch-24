@@ -1,5 +1,8 @@
 import React from "react";
-import "./FruitsForm.css";
+import styles from "../../UI/FruitsForm.module.css";
+import Card from "../../UI/Card";
+import Form from "../../UI/Form";
+import Button from "../../UI/Button";
 
 function TableForm(props) {
   const [newNama, setNewNama] = React.useState("");
@@ -23,12 +26,12 @@ function TableForm(props) {
       hargaTotal: +newHarga,
       beratTotal: +newBerat,
     };
-    let index=-1
-    if (props.index>=0) {
-      index = props.index
-      for (const item in newFruitsData){
-        if (newFruitsData[item] ===''){
-          newFruitsData[item] = props.data[item]
+    let index = -1;
+    if (props.index >= 0) {
+      index = props.index;
+      for (const item in newFruitsData) {
+        if (newFruitsData[item] === "") {
+          newFruitsData[item] = props.data[item];
         }
       }
     }
@@ -38,8 +41,8 @@ function TableForm(props) {
     setNewHarga("");
   };
   return (
-    <>
-      <form onSubmit={submitHandler}>
+    <Card>
+      <Form onSubmit={submitHandler} className={styles['fruits-form']}>
         <div>
           <label>Nama : </label>
           <input
@@ -69,11 +72,11 @@ function TableForm(props) {
             placeholder={props.data.beratTotal}
           />
         </div>
-        <div className="fruits-form__button">
-          <button type="submit">submit</button>
+        <div>
+          <Button type="submit">submit</Button>
         </div>
-      </form>
-    </>
+      </Form>
+    </Card>
   );
 }
 export default TableForm;

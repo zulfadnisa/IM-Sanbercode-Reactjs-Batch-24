@@ -1,6 +1,6 @@
 import React from "react";
 import StudentForm from "./StudentForm";
-import "./NewStudent.css";
+import Header from '../../UI/Header'
 
 const newStudent = (props) => {
   let data = {
@@ -16,10 +16,10 @@ const newStudent = (props) => {
     data.score = props.dataEdit.score;
   }
   return (
-    <div className="students-form">
-      <h2>Form Nilai Mahasiswa</h2>
+    <>
+      <Header title='Form Nilai Mahasiswa'/>
       <StudentForm saveNewStudent={props.addNewStudent} data={data} />
-    </div>
+    </>
   );
 };
 export default newStudent;

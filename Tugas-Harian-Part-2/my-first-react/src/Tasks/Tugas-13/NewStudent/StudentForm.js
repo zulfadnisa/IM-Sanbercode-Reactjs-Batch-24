@@ -1,5 +1,8 @@
 import React from "react";
-import styles from "./StudentForm.module.css";
+import styles from "../../UI/StudentForm.module.css";
+import Card from "../../UI/Card";
+import Form from "../../UI/Form";
+import Button from "../../UI/Button";
 
 function TableForm(props) {
   const [newName, setNewName] = React.useState("");
@@ -55,46 +58,45 @@ function TableForm(props) {
     setNewScore("");
   };
   return (
-    <>
-      <form onSubmit={submitHandler}>
-        <div
-          className={`${styles["student-form"]} ${!isValid && styles.invalid}`}
-        >
-          <div>
-            <label>Nama </label>
-            <input
-              type="text"
-              value={newName}
-              onChange={nameChangeHandler}
-              placeholder={props.data.name}
-            />
-          </div>
-          <div>
-            <label>Mata Kuliah </label>
-            <input
-              type="text"
-              value={newCourse}
-              onChange={courseChangeHandler}
-              placeholder={props.data.course}
-            />
-          </div>
-          <div>
-            <label>Nilai </label>
-            <input
-              type="number"
-              min="0"
-              max="100"
-              value={newScore}
-              onChange={scoreChangeHandler}
-              placeholder={props.data.score}
-            />
-          </div>
-          <div>
-            <button type="submit">SUBMIT</button>
-          </div>
+    <Card>
+      <Form
+        onSubmit={submitHandler}
+        className={`${styles["student-form"]} ${!isValid && styles.invalid}`}
+      >
+        <div>
+          <label>Nama </label>
+          <input
+            type="text"
+            value={newName}
+            onChange={nameChangeHandler}
+            placeholder={props.data.name}
+          />
         </div>
-      </form>
-    </>
+        <div>
+          <label>Mata Kuliah </label>
+          <input
+            type="text"
+            value={newCourse}
+            onChange={courseChangeHandler}
+            placeholder={props.data.course}
+          />
+        </div>
+        <div>
+          <label>Nilai </label>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            value={newScore}
+            onChange={scoreChangeHandler}
+            placeholder={props.data.score}
+          />
+        </div>
+        <div>
+          <Button type="submit">SUBMIT</Button>
+        </div>
+      </Form>
+    </Card>
   );
 }
 export default TableForm;

@@ -1,14 +1,23 @@
 import React from "react";
 import StudentsTableItem from "./StudentsTableItem";
-import styles from "../../UI/StudentsTable.module.css";
+import { StudentsContext } from "../Context/StudentsContext";
+import style from "../../UI/StudentsTable.module.css";
 import Header from "../../UI/Header";
 import Card from "../../UI/Card";
+import Button from "../../UI/Button";
+import { useHistory } from "react-router-dom";
 
-const StudentsTable = (props) => {
+const StudentsTable = () => {
+  const [students] = React.useContext(StudentsContext);
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push("/form");
+  };
   return (
     <>
       <Header title="Daftar Nilai Mahasiswa" />
-      <Card className={styles["students-table"]}>
+      <Card className={style["students-table"]}>
         <table>
           <thead>
             <tr>
@@ -21,24 +30,23 @@ const StudentsTable = (props) => {
             </tr>
           </thead>
           <tbody>
-            {props.items.map((student, index) => {
+            {students.map((student, index) => {
               return (
                 <StudentsTableItem
                   key={student.id}
-                  id={student.id}
+                  data={student}
                   index={index}
-                  name={student.name}
-                  course={student.course}
-                  score={student.score}
-                  indexScore={student.indexScore}
-                  saveDelete={props.addDelete}
-                  saveEdit={props.addEdit}
                 />
               );
             })}
           </tbody>
         </table>
       </Card>
+      <div className={style["go-form"]}>
+        <Button onClick={handleClick} type="button">
+          Go To Form
+        </Button>
+      </div>
     </>
   );
 };
