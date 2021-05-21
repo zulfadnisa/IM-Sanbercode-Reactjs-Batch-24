@@ -7,7 +7,9 @@ const StudentsTable = () => {
   const [students] = React.useContext(StudentsContext);
   return (
     <>
-      <h2>Daftar Nilai Mahasiswa</h2>
+      <div className='student-table__header'>
+        <h2>Daftar Nilai Mahasiswa</h2>
+      </div>
       <table className="students-table">
         <thead>
           <tr>

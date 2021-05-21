@@ -17,11 +17,11 @@
   box-sizing: border-box;
 }
 .student-form button {
-  padding: 12px;
-  border: 1px solid black;
+  padding: 13px;
+  border: 1px solid #4f005f;
   color: white;
-  background: black;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+  background: #4f005f;
+  box-shadow: 0 0.1em #69017e, 0 0.2em rgba(0, 0, 0, 0.26);
   cursor: pointer;
   width: 100%;
   border-radius: 5px;
@@ -30,6 +30,6 @@
   color: red;
 }
 .student-form.invalid input {
-  background: rgb(235, 186, 181);
+  background: rgb(233, 201, 197);
   border-color: red;
 }

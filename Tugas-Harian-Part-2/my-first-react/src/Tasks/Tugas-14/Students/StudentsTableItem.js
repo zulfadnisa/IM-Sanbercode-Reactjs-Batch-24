@@ -1,14 +1,13 @@
 import React from "react";
 import "./StudentsTableItem.css";
 import axios from "axios";
-import {
-  StudentsContext
-} from "../Context/StudentsContext";
+import { StudentsContext } from "../Context/StudentsContext";
 import { StudentEditContext } from "../Context/StudentEditContext";
+import Button from "../UI/Button";
 
 const StudentsTableItem = (props) => {
   const [students, setStudents] = React.useContext(StudentsContext);
-  const [editData,setEditData] = React.useContext(StudentEditContext);
+  const [editData, setEditData] = React.useContext(StudentEditContext);
 
   const addEditHandler = () => {
     setEditData({
@@ -16,7 +15,7 @@ const StudentsTableItem = (props) => {
       name: props.data.name,
       course: props.data.course,
       score: props.data.score,
-      isEditing: true
+      isEditing: true,
     });
   };
 
@@ -41,14 +40,10 @@ const StudentsTableItem = (props) => {
       <td>{props.data.indexScore}</td>
       <td>
         <span>
-          <button type="submit" onClick={addEditHandler}>
-            Edit
-          </button>
+          <Button onClick={addEditHandler}>Edit</Button>
         </span>
         <span>
-          <button type="submit" onClick={addDeleteHandler}>
-            Delete
-          </button>
+          <Button onClick={addDeleteHandler}>Delete</Button>
         </span>
       </td>
     </tr>
