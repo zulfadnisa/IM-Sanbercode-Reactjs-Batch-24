@@ -10,33 +10,10 @@ function TableForm(props) {
   const nameInput = React.useRef();
   const courseInput = React.useRef();
   const scoreInput = React.useRef();
-
-  // const [newName, setNewName] = React.useState("");
-  // const [newCourse, setNewCourse] = React.useState("");
-  // const [newScore, setNewScore] = React.useState("");
-  // const [isValid, setIsValid] = React.useState(true);
   const [students, setStudents] = React.useContext(StudentsContext);
   const [editData, setEditData] = React.useContext(StudentEditContext);
   const [error, setError] = React.useState();
 
-  // const nameChangeHandler = (event) => {
-  //   if (event.target.value.trim().length > 0) {
-  //     setIsValid(true);
-  //   }
-  //   setNewName(event.target.value);
-  // };
-  // const courseChangeHandler = (event) => {
-  //   if (event.target.value.trim().length > 0) {
-  //     setIsValid(true);
-  //   }
-  //   setNewCourse(event.target.value);
-  // };
-  // const scoreChangeHandler = (event) => {
-  //   if (event.target.value.trim().length > 0) {
-  //     setIsValid(true);
-  //   }
-  //   setNewScore(event.target.value);
-  // };
   const addStudentHandler = (student, currentId) => {
     if (currentId === "") {
       axios
@@ -84,14 +61,6 @@ function TableForm(props) {
     const newName = nameInput.current.value;
     const newCourse = courseInput.current.value;
     const newScore = scoreInput.current.value;
-    // if (
-    //   newName.trim().length === 0 ||
-    //   newCourse.trim().length === 0 ||
-    //   newScore.trim().length === 0
-    // ) {
-    //   setIsValid(false);
-    //   return;
-    // }
     if (
       newName.trim().length === 0 ||
       newCourse.trim().length === 0 ||
@@ -99,7 +68,8 @@ function TableForm(props) {
     ) {
       setError({
         title: "Invalid input",
-        message: "Please enter a valid name and course (non-empty values).",
+        message:
+          "Please enter a valid name, course and score (non-empty values).",
       });
       return;
     } else if (+newScore > 100 || +newScore < 0) {
@@ -119,9 +89,6 @@ function TableForm(props) {
     } else {
       addStudentHandler(newStudent, "");
     }
-    // setNewName("");
-    // setNewCourse("");
-    // setNewScore("");
     nameInput.current.value = "";
     courseInput.current.value = "";
     scoreInput.current.value = "";
@@ -140,25 +107,14 @@ function TableForm(props) {
       )}
       <Card className={styles["student-form"]}>
         <form onSubmit={submitHandler}>
-          {/* <div
-          className={`${styles["student-form"]} ${!isValid && styles.invalid}`}
-        > */}
           <div>
             <label>Nama </label>
-            <input
-              type="text"
-              // value={newName}
-              // onChange={nameChangeHandler}
-              ref={nameInput}
-              placeholder={editData.name}
-            />
+            <input type="text" ref={nameInput} placeholder={editData.name} />
           </div>
           <div>
             <label>Mata Kuliah </label>
             <input
               type="text"
-              // value={newCourse}
-              // onChange={courseChangeHandler}
               ref={courseInput}
               placeholder={editData.course}
             />
@@ -169,8 +125,6 @@ function TableForm(props) {
               type="number"
               max="100"
               min="0"
-              // value={newScore}
-              // onChange={scoreChangeHandler}
               ref={scoreInput}
               placeholder={editData.score}
             />
