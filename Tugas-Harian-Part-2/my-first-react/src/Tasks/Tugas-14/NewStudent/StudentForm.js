@@ -92,7 +92,11 @@ function TableForm(props) {
     //   setIsValid(false);
     //   return;
     // }
-    if (newName.trim().length === 0 || newCourse.trim().length === 0) {
+    if (
+      newName.trim().length === 0 ||
+      newCourse.trim().length === 0 ||
+      newScore.trim().length === 0
+    ) {
       setError({
         title: "Invalid input",
         message: "Please enter a valid name and course (non-empty values).",
