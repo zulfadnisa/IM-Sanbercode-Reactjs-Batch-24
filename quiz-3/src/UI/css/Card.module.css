@@ -1,0 +1,15 @@
+.card {
+  /* background: #f2f2f2; */
+  clear: both;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.26);
+  border-radius: 4px;
+  margin: 30px 200px 200px;
+  /* border-radius: 5px; */
+  /* background-color: #f2f2f2; */
+  /* padding: 20px; */
+  background-color: white;
+  position: relative;
+  top: 70px;
+  padding: 50px;
+  /* margin-bottom: 130px; */
+}

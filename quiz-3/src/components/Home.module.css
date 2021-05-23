@@ -1,0 +1,18 @@
+.home {
+  border-bottom: 1px solid #aaa;
+}
+.home img {
+  width: 200px;
+}
+.home div:first-of-type{
+  text-align: center;
+  margin-bottom:30px;
+}
+.home div:first-of-type div {
+  float: right;
+  position: relative;
+  right: 240px;
+}
+.home .description {
+  clear: both;
+}
