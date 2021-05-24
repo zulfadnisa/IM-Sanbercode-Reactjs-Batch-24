@@ -89,7 +89,7 @@ const BooksForm = (props) => {
       price: 0,
       image_url: "",
     });
-    history.push("/books");
+    history.push("/");
   };
   const handleChange = (event) => {
     let value = event.target.value;
@@ -99,7 +99,6 @@ const BooksForm = (props) => {
       [typeOfInput]: value,
     });
   };
-
   return (
     <Card>
       <h2>Books Form</h2>
