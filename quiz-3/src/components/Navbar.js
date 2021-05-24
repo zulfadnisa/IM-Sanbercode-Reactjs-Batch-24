@@ -13,7 +13,7 @@ const Navbar = () => {
     if (storedUseLoggedInInInformation === "1") {
       setIsLoggedIn(true);
     }
-  }, []);
+  }, [localStorage]);
   const history = useHistory();
   const logoutHandler = () => {
     localStorage.removeItem("isLoggedIn");

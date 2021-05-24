@@ -4,8 +4,10 @@ import Card from "../../UI/css/Card";
 import Button from "../../UI/css/Button";
 import { BooksContext } from "./BooksContext";
 import style from "./BooksForm.module.css";
+import { useHistory } from "react-router-dom";
 
 const BooksForm = (props) => {
+  const history = useHistory();
   const [books, setBooks, fetch, setFetch, currentId, setCurrentId] =
     React.useContext(BooksContext);
   const [input, setInput] = React.useState({
@@ -87,6 +89,7 @@ const BooksForm = (props) => {
       price: 0,
       image_url: "",
     });
+    history.push("/books");
   };
   const handleChange = (event) => {
     let value = event.target.value;

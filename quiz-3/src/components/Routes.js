@@ -6,10 +6,10 @@ import Navbar from "./Navbar";
 import Login from "./Login";
 import BookList from "./Books/BookList";
 import { BooksProvider } from "./Books/BooksContext";
-import { LoginProvider, LoginContext } from "./LoginContext";
+import { LoginProvider } from "./LoginContext";
+import ProtectedRoute from './ProtectedRoute'
 
 export default function App() {
-  // const [isLoggedIn] = React.useContext(LoginContext);
   return (
     <>
       <Router>
@@ -26,9 +26,10 @@ export default function App() {
               <Route exact path="/login">
                 <Login />
               </Route>
-              <Route exact path="/books">
+              {/* <Route exact path="/books">
                 <BookList />
-              </Route>
+              </Route> */}
+              <ProtectedRoute path='/books' component={BookList} />
             </Switch>
           </BooksProvider>
         </LoginProvider>

@@ -45,7 +45,8 @@ const BooksTable = () => {
     };
     if (fetch) {
       if (isSearch === true) {
-        let result = books.filter((el) => el.title === search);
+        const searchnow = search.toLowerCase()
+        let result = books.filter((el) => el.title.toLowerCase().includes(searchnow));
         if (result.length > 0) {
           setBooks(result);
         } else {
