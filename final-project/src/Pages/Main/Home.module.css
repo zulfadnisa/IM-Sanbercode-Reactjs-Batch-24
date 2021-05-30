@@ -1,0 +1,47 @@
+.header{
+  margin-bottom: 100px;
+}
+.header .title{
+  float: left;
+  margin-top: 80px;
+  width: 40%;
+  margin-right: 50px;
+}
+.title h1{
+  text-align: left;
+  font-size: xxx-large;
+}
+.title h4{
+  text-align: left;
+  font-size: large;
+  color: #6d6a6a;
+}
+.icon{
+  width: 55%;
+}
+.content h2{
+  margin-bottom: 30px;
+}
+.col{
+  margin-right: 0px;
+  padding: 0;
+}
+.card{
+  width: 220px;
+  padding: 0;
+  border:solid 1px#c4c3c3;
+  /* background-color: #fffdfd; */
+}
+.meta{
+  height: 65px;
+}
+.image {
+  width: 10vw;
+  border: solid 1px #cccccc;
+  cursor: pointer;
+  height: 10vw;
+  margin-bottom:10px;
+}
+.image:hover{
+  box-shadow: 5px 5px 2px #f5f5f5;
+}

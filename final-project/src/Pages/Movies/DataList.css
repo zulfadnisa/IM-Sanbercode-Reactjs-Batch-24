@@ -1,0 +1,101 @@
+.site-layout-background {
+  padding: 30px 20px;
+}
+.content-layout-background {
+  padding: 0;
+  min-height: 280;
+}
+.site-layout-background SmileOutlined{
+    margin: 100px;
+}
+.site-layout-background Button{
+    background-color:#a53f3b;
+    border-color: #a53f3b;
+    width: 40%;
+    border-radius: 5px;
+}
+.site-layout-background Button:hover{
+    background-color: #bd4c48;
+    border-color: #bd4c48;
+}
+.content-layout{
+    padding: 30px 0;
+}
+.content-layout button{
+    background-color:#a53f3b;
+    border-color: solid 1px #a53f3b;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+.content-layout button:hover,
+.content-layout button:active {
+  background: #bd4c48;
+  border-color: #bd4c48;
+}
+
+.content-layout button:focus {
+  outline: none;
+}
+.search{
+    width: 30%;
+    float: left;
+}
+.content-layout Table{
+    margin-top: 15px;
+}
+.table-striped-rows thead {
+    background-color: #bd4c48;
+    color: white;
+}
+.content-layout Button{
+  float: right;
+}
+.content-layout Button:hover,
+.content-layout Button:active {
+  background: #bd4c48;
+  border-color: #bd4c48;
+  color: white;
+}
+.search-game{
+  width: 30%;
+}
+.content-layout-game button{
+  width: 100%;
+}
+/* .content-layout-game{
+  padding: 30px 0;
+} */
+.content-layout-game button{
+  background-color:#a53f3b;
+  border-color: solid 1px #a53f3b;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+.content-layout-game button:hover,
+.content-layout-game button:active {
+background: #bd4c48;
+border-color: #bd4c48;
+}
+
+.content-layout-game button:focus {
+outline: none;
+}
+.content-layout-game .add{
+  float: right;
+  width: 10%;
+}
+.content-layout-game Button:hover,
+.content-layout-game Button:active {
+  background: #bd4c48;
+  border-color: #bd4c48;
+  color: white;
+}
+.layout{
+  margin-top: 20px;
+}
+.breadcrumb{
+  font-size: medium;
+  cursor: pointer;
+}

@@ -1,0 +1,16 @@
+.footer {
+  clear: both;
+  /* display: flex; */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* bottom: 0px;
+  right: 0px;
+  left: 0px; */
+  background-color: black;
+  color: white;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}

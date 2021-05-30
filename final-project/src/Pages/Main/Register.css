@@ -1,0 +1,27 @@
+.register-card {
+  /* max-width: 500px; */
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 8px;
+}
+.register-form {
+  max-width: 500px;
+  min-width: 350px;
+  float: right;
+  margin-right: 100px;
+  margin-top: 50px;
+}
+.register-form-button {
+  width: 100%;
+  background-color: #a53f3b;
+  border-color: #a53f3b;
+}
+.register-form-button:hover,
+.register-form-button:active {
+  background: #bd4c48;
+  border-color: #bd4c48;
+}
+
+.register-card .icon {
+  width: 50%;
+}

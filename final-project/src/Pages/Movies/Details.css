@@ -1,0 +1,47 @@
+.site-page-header{
+    margin-top: 20px;
+}
+.site-page-header hr{
+    color: #fcfcfc;
+    margin-bottom: 30px;
+}
+.site-page-header-right{
+    margin-left: 80px;
+    border-radius: 12px;
+    padding:10px 20px
+}
+.site-page-header-right label{
+    font-weight: bold;
+    /* margin-bottom: 10px; */
+    padding-right: 10px;
+}
+.site-page-image{
+    width: 300px;
+    object-fit:cover;
+    border-radius: 7px;
+}
+.tabs{
+    margin-top: 50px;
+    border-radius: 8px;
+}
+.tabs p{
+    float: left;
+    text-align: justify;
+    width: 40%;
+}
+.tabs img{
+    margin-left: 70px;
+    width: 50%;
+    position: relative;
+    bottom: 0px;
+}
+.game-icon{
+    width: 50%;
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sider{
+    background-color: transparent;
+}

@@ -1,0 +1,15 @@
+.logo img{
+  float: left;
+  width: 18%;
+}
+.button {
+  background-color: #a53f3b;
+  border-color:  #a53f3b;
+  color: white;
+}
+.button:hover,
+.button:active {
+  background: #bd4c48;
+  border-color: #bd4c48;
+  color: white;
+}
